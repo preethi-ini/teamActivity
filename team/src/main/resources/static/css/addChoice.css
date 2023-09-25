@@ -1,0 +1,40 @@
+ html, body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    h3 {
+      color: red;
+      text-align: center;
+    }
+
+    #addNewChoice {
+      width: 500px;
+      margin: 0 auto;
+    }
+
+    form {
+      padding: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+
+    input[type="submit"] {
+      background-color: #333;
+      color: white;
+      cursor: pointer;
+    }
+
+    .error {
+      color: red;
+    }
