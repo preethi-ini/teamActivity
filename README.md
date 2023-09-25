@@ -1,5 +1,4 @@
-# teamActivity
-Dine Decide
+# Dine Decide
 To begin:
 1. Clone the code
 2. Open command prompt and change directory to the team folder.
