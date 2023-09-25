@@ -14,7 +14,7 @@
   <form action="/addNewChoice" method="post">
     <p>
       <label>Enter Employee Id</label>
-      <input type="number" name="employeeId" required />
+      <input type="number" name="employeeId" min="1" required />
     </p>
     <p>
       <label>Enter your Choice of Restaurant</label>
