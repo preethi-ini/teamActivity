@@ -1,6 +1,8 @@
 package com.palo.team.model;
 
+import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
@@ -12,11 +14,14 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class TeamChoiceModel {
 	
-	@NotNull(message="this field is required")
-	@Min(value = 1, message = "employeeId must be greater than or equal to 1")
-	private Integer employeeId;
+	@NotNull(message="EmployeeId is required")
+	@Min(value = 1, message = "EmployeeId must be greater than or equal to 1")
+	@Max(value = 10000, message = "EmployeeId must be less than or equal to 10000")
+	private int employeeId;
 	
-	@NotNull(message="this field is required")
+	@NotNull(message="Choice is required")
+	@NotBlank(message="Choice cannot be blank")
+	@Size(max=100, message ="Choice can be less than 100 characters" )
 	private String choice;
 
 }
