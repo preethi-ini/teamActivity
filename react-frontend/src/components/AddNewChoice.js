@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import ChoiceService from "./ChoiceService";
 const AddNewChoice = () => {
   const [choice, setChoice] = useState({
-    employeeId: 0,
+    employeeId: null,
     choice: "",
   });
 
@@ -16,7 +16,7 @@ const AddNewChoice = () => {
   const validateChoice = (choice) => {
     if (choice.employeeId < 1 || choice.employeeId > 10000) {
       setData(
-        "Please enter a valid employee Id. Employee Id must be between 1-1000"
+        "Please enter a valid employee Id. Employee Id must be between 1-10000"
       );
       return false;
     }
@@ -65,8 +65,8 @@ const AddNewChoice = () => {
 
   return (
     <div className="flex max-w-2xl mx-auto shadow border-b">
+    <div style={{ color: "red" }}>{data}</div>
       <div className="px-8 py-8 block">
-        <div style={{ color: "red" }}>{data}</div>
         <div className="font-thin tracking-wider left">
           <h1>Add New choice</h1>
         </div>

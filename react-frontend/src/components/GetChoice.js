@@ -23,7 +23,7 @@ const GetChoice = () => {
 [])
 
   return (
-    <div> Selected Choice is {choices} </div>
+    <><div> Selected Choice is </div><div>{choices} </div></>
   )
 }
 
