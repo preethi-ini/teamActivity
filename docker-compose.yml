@@ -9,7 +9,7 @@ services:
     networks:
       - front_default
   front-end:
-    image: "react-fontend"
+    image: "react-frontend"
     container_name: frontend
     ports:
       - "3000:3000"
