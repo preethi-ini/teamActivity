@@ -1,0 +1,21 @@
+version: '3'
+services:
+
+  back-end:
+    image: "teamactivity"
+    container_name: backend
+    ports:
+      - "8085:8085"
+    networks:
+      - front_default
+  front-end:
+    image: "react-fontend"
+    container_name: frontend
+    ports:
+      - "3000:3000"
+    networks:
+      - front_default
+networks:
+  front_default:
+    name: custom_network
+ 
